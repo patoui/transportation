@@ -4,7 +4,7 @@
 <div class="container is-fluid">
     <div class="columns">
         <div class="column"></div>
-        <div id="login" class="column is-third">
+        <div id="login" class="column is-third is-half-tablet">
             <div class="card">
                 <header class="card-header">
                     <p class="card-header-title has-text-centered">

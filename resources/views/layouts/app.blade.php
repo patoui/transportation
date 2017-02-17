@@ -22,10 +22,34 @@
 </head>
 <body>
     <div id="app">
+        <section class="hero is-dark is-bold">
+            <!-- Hero header: will stick at the top -->
+            <navigation-vue></navigation-vue>
+
+            <!-- Hero content: will be in the middle -->
+            @yield('splash')
+
+            <!-- Hero footer: will stick at the bottom -->
+            <!-- <div class="hero-foot">
+            <nav class="tabs">
+            <div class="container">
+            <ul>
+            <li class="is-active"><a>Overview</a></li>
+            <li><a>Modifiers</a></li>
+            <li><a>Grid</a></li>
+            <li><a>Elements</a></li>
+            <li><a>Components</a></li>
+            <li><a>Layout</a></li>
+            </ul>
+            </div>
+            </nav>
+            </div> -->
+        </section>
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ mix('/js/app.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>

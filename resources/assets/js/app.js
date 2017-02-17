@@ -4,8 +4,10 @@
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('navigation-vue', require('./components/Navigation.vue'));
 
 const app = new Vue({
+
     el: '#app'
+
 });

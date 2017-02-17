@@ -1,12 +1,23 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="columns">
-        <div class="column">
-            <h1>Dashboard</h1>
-            <p>You are logged in!</p>
-        </div>
+@section('splash')
+<div class="hero-body">
+    <div class="container has-text-centered">
+        <h1 class="title">Transportation</h1>
+        <h2 class="subtitle">The only transportation app you'll ever need</h2>
     </div>
 </div>
+@endsection
+
+@section('content')
+<section class="section">
+    <div class="container">
+      <div class="heading">
+        <h1 class="title">Dashboard</h1>
+        <h2 class="subtitle">
+          A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+        </h2>
+      </div>
+    </div>
+  </section>
 @endsection
