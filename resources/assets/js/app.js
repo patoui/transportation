@@ -5,6 +5,7 @@
  */
 
 Vue.component('navigation-vue', require('./components/Navigation.vue'));
+Vue.component('map-vue', require('./components/Map.vue'));
 
 const app = new Vue({
 

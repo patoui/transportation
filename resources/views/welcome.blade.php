@@ -19,5 +19,10 @@
         </h2>
       </div>
     </div>
-  </section>
+</section>
+<section class="section">
+    <div class="container">
+        <map-vue></map-vue>
+    </div>
+</section>
 @endsection

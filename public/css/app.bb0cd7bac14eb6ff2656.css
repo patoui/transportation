@@ -10200,7 +10200,7 @@ label.panel-block:hover {
 }
 
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #login {
