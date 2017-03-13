@@ -14,13 +14,18 @@
 
 Auth::routes();
 
-Route::get('logout', 'Auth\LoginController@logout');
+Route::get(
+    'logout',
+    [
+        'as' => 'logout',
+        'uses' => 'Auth\LoginController@logout'
+    ]
+);
 
-Route::group(
-    ['middleware' => 'auth'],
-    function () {
-        Route::get('/', function () {
-            return view('welcome');
-        });
-    }
+Route::get(
+    '/',
+    [
+        'as' => 'home',
+        'uses' => 'HomeController@index'
+    ]
 );

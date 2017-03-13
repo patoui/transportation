@@ -19,6 +19,7 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+    @yield('pre-scripts')
 </head>
 <body>
     <div id="app">

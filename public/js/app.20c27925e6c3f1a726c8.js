@@ -30258,7 +30258,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_0_vue2_google_maps__, {
     load: {
-        key: 'GOOGLE API KEY',
+        key: window.google.maps_api_key,
         v: '3'
     }
 });

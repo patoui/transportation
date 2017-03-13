@@ -26,3 +26,9 @@
     </div>
 </section>
 @endsection
+
+@section('scripts')
+<script type="text/javascript">
+    window.GOOGLE_API_KEY = {!! $googleApiKey !!};
+</script>
+@endsection

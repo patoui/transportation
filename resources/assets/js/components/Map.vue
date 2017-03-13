@@ -21,7 +21,7 @@ import Vue from 'vue';
 
 Vue.use(VueGoogleMaps, {
     load: {
-        key: 'GOOGLE API KEY',
+        key: window.google.maps_api_key,
         v: '3',
         // libraries: 'places', //// If you need to use place input
     }
