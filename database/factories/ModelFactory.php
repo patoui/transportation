@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Route::class, function (Faker\Generator $faker) {
+    return [
+        'route_id' => mt_rand(1, 100) . '-256',
+        'route_short_name' => (string) mt_rand(1, 300),
+        'route_long_name' => $faker->name,
+        'route_desc' => $faker->sentence,
+        'route_type' => '3',
+        'route_url' => $faker->url
+    ];
+});
