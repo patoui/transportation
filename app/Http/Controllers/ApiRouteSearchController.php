@@ -6,7 +6,7 @@ use App\Route;
 use App\RouteFilters;
 use Illuminate\Http\Request;
 
-class ApiRouteSearch extends Controller
+class ApiRouteSearchController extends Controller
 {
     public function index(RouteFilters $filters)
     {

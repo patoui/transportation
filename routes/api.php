@@ -17,4 +17,4 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('route/search', 'ApiRouteSearch@index');
+Route::get('route/search', 'ApiRouteSearchController@index');
