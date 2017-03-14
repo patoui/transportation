@@ -18,3 +18,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('route/search', 'ApiRouteSearchController@index');
+
+Route::get('route/{route}/trips', 'ApiRouteTripController@index');
