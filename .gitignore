@@ -11,3 +11,4 @@ Homestead.yaml
 /storage/nginx_error.log
 tags
 .php_cs.cache
+tests/Browser/console
