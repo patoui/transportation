@@ -22,15 +22,17 @@ $factory->define(App\Route::class, function (Faker\Generator $faker) {
     ];
 });
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
+$factory->define(App\Stop::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'stop_id' => uniqid(),
+        'stop_code' => (string) mt_rand(1, 3000),
+        'stop_name' => $faker->name,
+        'stop_desc' => '',
+        'stop_lat' => $faker->randomFloat(6, -100000, 100000),
+        'stop_lon' => $faker->randomFloat(6, -100000, 100000),
+        'zone_id' => null,
+        'stop_url' => null,
+        'location_type' => '0'
     ];
 });
 
@@ -42,5 +44,16 @@ $factory->define(App\Trip::class, function (Faker\Generator $faker) {
         'trip_headsign' => $faker->name,
         'direction_id' => (string) mt_rand(0, 1),
         'block_id' => (string) mt_rand(0, 3000)
+    ];
+});
+
+$factory->define(App\User::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'password' => $password ?: $password = bcrypt('secret'),
+        'remember_token' => str_random(10),
     ];
 });
