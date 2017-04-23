@@ -16,7 +16,7 @@
                     <div class="card-content">
                         <div class="content">
                             <p class="control has-icon">
-                                <input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" name="email" type="email" placeholder="Email" required>
+                                <input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" name="email" type="email" placeholder="Email" required autofocus>
                                 <span class="icon is-small"><i class="fa fa-envelope"></i></span>
                                 @if($errors->has('email'))
                                 <span class="help is-danger">{{ $errors->first('email') }}</span>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStopTimeTable extends Migration
+class CreateStopTimesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateStopTimeTable extends Migration
      */
     public function up()
     {
-        Schema::create('stop_time', function (Blueprint $table) {
+        Schema::create('stop_times', function (Blueprint $table) {
             $table->increments('id');
             $table->string('trip_id')->index();
-            $table->datetime('arrival_time');
-            $table->datetime('departure_time');
+            $table->time('arrival_time');
+            $table->time('departure_time');
             $table->string('stop_id')->index();
             $table->integer('stop_sequence')->nullable();
             $table->tinyInteger('pickup_type')->nullable();
@@ -33,6 +33,6 @@ class CreateStopTimeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stop_time');
+        Schema::dropIfExists('stop_times');
     }
 }

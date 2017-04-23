@@ -7,8 +7,9 @@
 Homestead.json
 Homestead.yaml
 .env
-/storage/nginx_access.log
-/storage/nginx_error.log
+/storage/logs/nginx_access.log
+/storage/logs/nginx_error.log
+storage/gtfs/*
 tags
 .php_cs.cache
-tests/Browser/console
+tests/Browser/console/*

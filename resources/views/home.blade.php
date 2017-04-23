@@ -23,15 +23,24 @@
       <div class="heading">
         <h1 class="title">Dashboard</h1>
         <h2 class="subtitle">
-          A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+          Notifications of delays will go here.
         </h2>
       </div>
     </div>
 </section>
 <section class="section">
     <div class="container">
-        <map-vue></map-vue>
+        <form>
+            <div class="field has-addons">
+                <p class="control is-expanded">
+                    <input name="search" class="input" type="text" placeholder="Search">
+                </p>
+                <p class="control">
+                    <button type="submit" class="button is-primary">Search</button>
+                </p>
+            </div>
+        </form>
+        <!-- <map-vue></map-vue> -->
     </div>
 </section>
-<h1>{!! $googleApiKey !!}</h1>
 @endsection

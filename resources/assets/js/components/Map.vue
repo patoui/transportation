@@ -6,6 +6,7 @@
         >
         <gmap-marker
         v-for="m in markers"
+        :key="m.id"
         :icon="{url: '/img/bus-tiny-2.png'}"
         :position="m.position"
         :clickable="true"

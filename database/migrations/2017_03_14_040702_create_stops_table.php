@@ -19,8 +19,8 @@ class CreateStopsTable extends Migration
             $table->string('stop_code')->nullable();
             $table->string('stop_name')->nullable();
             $table->string('stop_desc')->nullable();
-            $table->decimal('stop_lat', 10, 10)->nullable();
-            $table->decimal('stop_lon', 10, 10)->nullable();
+            $table->decimal('stop_lat', 20, 10)->nullable();
+            $table->decimal('stop_lon', 20, 10)->nullable();
             $table->string('zone_id')->nullable();
             $table->string('stop_url')->nullable();
             $table->string('location_type')->nullable();
