@@ -13,6 +13,6 @@ class Trip extends Model
 
     public function stops()
     {
-        return $this->belongsToMany(Stop::class, 'stop_time');
+        return $this->belongsToMany(Stop::class, 'stop_times');
     }
 }
