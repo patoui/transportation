@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Route extends Model
 {
-    use Filterable;
+    use Searchable;
 
     /**
      * trips that a route has

@@ -37,7 +37,7 @@ class ApiSearchForRouteTest extends TestCase
         $response = $this
             ->json(
                 'GET',
-                '/api/route/search?route=' . urlencode('222-256')
+                '/api/route/search?q=' . urlencode('222-256')
             );
 
         $response

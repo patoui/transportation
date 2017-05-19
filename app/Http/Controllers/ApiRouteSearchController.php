@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class ApiRouteSearchController extends Controller
 {
-    public function index(RouteFilters $filters)
+    public function index()
     {
-        return Route::filter($filters)->get();
+        return Route::search(request('q', null))->get();
     }
 }
