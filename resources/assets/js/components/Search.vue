@@ -38,7 +38,7 @@
                         <td class="is-hidden-touch" v-text="route.route_long_name"></td>
                         <td class="is-hidden-touch" v-text="route.route_desc"></td>
                         <td class="is-hidden-touch" v-text="route.route_type"></td>
-                        <td class="is-hidden-touch"><a v-bind:href="route.route_url">link</a></td>
+                        <td class="is-hidden-touch"><a :href="getUrl(route.route_id)"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -104,6 +104,9 @@ export default {
     methods: {
         onSearch(query) {
             this.search.perform(query);
+        },
+        getUrl(routeId) {
+            return '/route/' + routeId;
         }
     }
 }

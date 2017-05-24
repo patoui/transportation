@@ -2270,6 +2270,9 @@ var Search = function () {
     methods: {
         onSearch: function onSearch(query) {
             this.search.perform(query);
+        },
+        getUrl: function getUrl(routeId) {
+            return '/route/' + routeId;
         }
     }
 });
@@ -25373,9 +25376,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "is-hidden-touch"
     }, [_c('a', {
       attrs: {
-        "href": route.route_url
+        "href": _vm.getUrl(route.route_id)
       }
-    }, [_vm._v("link")])])])
+    }, [_c('i', {
+      staticClass: "fa fa-info-circle",
+      attrs: {
+        "aria-hidden": "true"
+      }
+    })])])])
   }))], 1), _vm._v(" "), _vm._m(1)])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('thead', [_c('tr', [_c('th', [_vm._v("Id")]), _vm._v(" "), _c('th', [_vm._v("Short Name")]), _vm._v(" "), _c('th', {
