@@ -13,3 +13,4 @@ storage/gtfs/*
 tags
 .php_cs.cache
 tests/Browser/console/*
+storage/scout_testing.json

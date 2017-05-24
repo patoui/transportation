@@ -5,9 +5,10 @@ namespace Tests\Browser;
 use App\Route;
 use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use PatOui\Scout\Engines\TestingEngine;
 use Tests\DuskTestCase;
 
-class SearchForRoute extends DuskTestCase
+class SearchForRouteTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
@@ -22,19 +23,17 @@ class SearchForRoute extends DuskTestCase
         $user = factory(User::class)->create();
         // Setup fake route with short name
         factory(Route::class)->create([
+            'route_id' => '321-123',
             'route_short_name' => 'Durham College & Go Station',
         ]);
 
         $this->browse(function ($browser) use ($user) {
             $result = $browser->loginAs($user)
                     ->visit('/')
-                    ->type('search', 'Durham College & Go Station')
-                    ->press('Search')
+                    ->type('search', 'd')
                     ->assertPathIs('/')
-                    ->assertQueryStringHas(
-                        'search',
-                        'Durham College & Go Station'
-                    );
+                    ->assertSee('321-123')
+                    ->assertSee('Durham College & Go Station');
         });
     }
 }

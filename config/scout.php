@@ -59,4 +59,8 @@ return [
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
 
+    'testing' => [
+        'storage' => env('SCOUT_TESTING_FILE', storage_path('scout_testing.json'))
+    ],
+
 ];

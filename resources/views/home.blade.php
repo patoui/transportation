@@ -28,19 +28,5 @@
       </div>
     </div>
 </section>
-<section class="section">
-    <div class="container">
-        <form>
-            <div class="field has-addons">
-                <p class="control is-expanded">
-                    <input name="search" class="input" type="text" placeholder="Search">
-                </p>
-                <p class="control">
-                    <button type="submit" class="button is-primary">Search</button>
-                </p>
-            </div>
-        </form>
-        <!-- <map-vue></map-vue> -->
-    </div>
-</section>
+<search-vue></search-vue>
 @endsection
