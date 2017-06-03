@@ -29,3 +29,11 @@ Route::get(
         'uses' => 'HomeController@index'
     ]
 );
+
+Route::get(
+    'route/{routeId}',
+    [
+        'as' => 'route.show',
+        'uses' => 'RouteController@show'
+    ]
+);
